@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ITequipment">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="equip_no" />
+      <PropertyRef Name="dept_1" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="belong" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="equip_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dept_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dept_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dept_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dept_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vedio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cpu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="memory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ip_new" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="class" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="belong" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="locate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="brand" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="startuse" Type="DateTime" Precision="3" />
+    <Property Name="repair" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="shgloldEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ITequipment" EntityType="Self.ITequipment" />
+  </EntityContainer>
+</Schema>

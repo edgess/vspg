@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“shglold.dbo.ITequipment”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="ITequipment">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="equip_no" />
+            <PropertyRef Name="dept_1" />
+            <PropertyRef Name="username" />
+            <PropertyRef Name="class" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="belong" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="equip_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dept_id" Type="varchar" MaxLength="30" />
+          <Property Name="dept_1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dept_2" Type="varchar" MaxLength="50" />
+          <Property Name="dept_3" Type="varchar" MaxLength="50" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="vedio" Type="varchar" MaxLength="50" />
+          <Property Name="cpu" Type="varchar" MaxLength="50" />
+          <Property Name="memory" Type="varchar" MaxLength="50" />
+          <Property Name="hd" Type="varchar" MaxLength="50" />
+          <Property Name="ip_new" Type="varchar" MaxLength="50" />
+          <Property Name="ip" Type="varchar" MaxLength="50" />
+          <Property Name="sn" Type="varchar" MaxLength="50" />
+          <Property Name="class" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="type" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="belong" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="memo" Type="varchar" MaxLength="100" />
+          <Property Name="locate" Type="varchar" MaxLength="50" />
+          <Property Name="brand" Type="varchar" MaxLength="10" />
+          <Property Name="model" Type="varchar" MaxLength="30" />
+          <Property Name="startuse" Type="datetime" />
+          <Property Name="repair" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="price" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="ModelsStoreContainer">
+          <EntitySet Name="ITequipment" EntityType="Self.ITequipment" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ITequipment].[id] AS [id], 
+    [ITequipment].[equip_no] AS [equip_no], 
+    [ITequipment].[dept_id] AS [dept_id], 
+    [ITequipment].[dept_1] AS [dept_1], 
+    [ITequipment].[dept_2] AS [dept_2], 
+    [ITequipment].[dept_3] AS [dept_3], 
+    [ITequipment].[username] AS [username], 
+    [ITequipment].[vedio] AS [vedio], 
+    [ITequipment].[cpu] AS [cpu], 
+    [ITequipment].[memory] AS [memory], 
+    [ITequipment].[hd] AS [hd], 
+    [ITequipment].[ip_new] AS [ip_new], 
+    [ITequipment].[ip] AS [ip], 
+    [ITequipment].[sn] AS [sn], 
+    [ITequipment].[class] AS [class], 
+    [ITequipment].[type] AS [type], 
+    [ITequipment].[belong] AS [belong], 
+    [ITequipment].[memo] AS [memo], 
+    [ITequipment].[locate] AS [locate], 
+    [ITequipment].[brand] AS [brand], 
+    [ITequipment].[model] AS [model], 
+    [ITequipment].[startuse] AS [startuse], 
+    [ITequipment].[repair] AS [repair], 
+    [ITequipment].[price] AS [price]
+    FROM [dbo].[ITequipment] AS [ITequipment]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ITequipment">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="equip_no" />
+            <PropertyRef Name="dept_1" />
+            <PropertyRef Name="username" />
+            <PropertyRef Name="class" />
+            <PropertyRef Name="type" />
+            <PropertyRef Name="belong" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equip_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dept_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="dept_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dept_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dept_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vedio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cpu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="memory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ip_new" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="class" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="belong" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="locate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="brand" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="startuse" Type="DateTime" Precision="3" />
+          <Property Name="repair" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="price" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="shgloldEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ITequipment" EntityType="Self.ITequipment" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="shgloldEntities">
+          <EntitySetMapping Name="ITequipment">
+            <EntityTypeMapping TypeName="Models.ITequipment">
+              <MappingFragment StoreEntitySet="ITequipment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="equip_no" ColumnName="equip_no" />
+                <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+                <ScalarProperty Name="dept_1" ColumnName="dept_1" />
+                <ScalarProperty Name="dept_2" ColumnName="dept_2" />
+                <ScalarProperty Name="dept_3" ColumnName="dept_3" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="vedio" ColumnName="vedio" />
+                <ScalarProperty Name="cpu" ColumnName="cpu" />
+                <ScalarProperty Name="memory" ColumnName="memory" />
+                <ScalarProperty Name="hd" ColumnName="hd" />
+                <ScalarProperty Name="ip_new" ColumnName="ip_new" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="sn" ColumnName="sn" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="belong" ColumnName="belong" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="locate" ColumnName="locate" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="startuse" ColumnName="startuse" />
+                <ScalarProperty Name="repair" ColumnName="repair" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

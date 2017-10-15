@@ -1,0 +1,137 @@
+﻿@model IEnumerable<WebApplication1.Models.ITequipment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Smjsmj</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table" border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dept_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dept_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dept_3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vedio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.memory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ip_new)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.memo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.locate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.startuse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.repair)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dept_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dept_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dept_3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vedio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.memory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ip_new)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.memo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startuse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

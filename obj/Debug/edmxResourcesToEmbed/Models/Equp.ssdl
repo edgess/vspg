@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“shglold.dbo.ITequipment”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ITequipment">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="equip_no" />
+      <PropertyRef Name="dept_1" />
+      <PropertyRef Name="username" />
+      <PropertyRef Name="class" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="belong" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="equip_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dept_id" Type="varchar" MaxLength="30" />
+    <Property Name="dept_1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dept_2" Type="varchar" MaxLength="50" />
+    <Property Name="dept_3" Type="varchar" MaxLength="50" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vedio" Type="varchar" MaxLength="50" />
+    <Property Name="cpu" Type="varchar" MaxLength="50" />
+    <Property Name="memory" Type="varchar" MaxLength="50" />
+    <Property Name="hd" Type="varchar" MaxLength="50" />
+    <Property Name="ip_new" Type="varchar" MaxLength="50" />
+    <Property Name="ip" Type="varchar" MaxLength="50" />
+    <Property Name="sn" Type="varchar" MaxLength="50" />
+    <Property Name="class" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="belong" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="memo" Type="varchar" MaxLength="100" />
+    <Property Name="locate" Type="varchar" MaxLength="50" />
+    <Property Name="brand" Type="varchar" MaxLength="10" />
+    <Property Name="model" Type="varchar" MaxLength="30" />
+    <Property Name="startuse" Type="datetime" />
+    <Property Name="repair" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="price" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="ITequipment" EntityType="Self.ITequipment" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ITequipment].[id] AS [id], 
+    [ITequipment].[equip_no] AS [equip_no], 
+    [ITequipment].[dept_id] AS [dept_id], 
+    [ITequipment].[dept_1] AS [dept_1], 
+    [ITequipment].[dept_2] AS [dept_2], 
+    [ITequipment].[dept_3] AS [dept_3], 
+    [ITequipment].[username] AS [username], 
+    [ITequipment].[vedio] AS [vedio], 
+    [ITequipment].[cpu] AS [cpu], 
+    [ITequipment].[memory] AS [memory], 
+    [ITequipment].[hd] AS [hd], 
+    [ITequipment].[ip_new] AS [ip_new], 
+    [ITequipment].[ip] AS [ip], 
+    [ITequipment].[sn] AS [sn], 
+    [ITequipment].[class] AS [class], 
+    [ITequipment].[type] AS [type], 
+    [ITequipment].[belong] AS [belong], 
+    [ITequipment].[memo] AS [memo], 
+    [ITequipment].[locate] AS [locate], 
+    [ITequipment].[brand] AS [brand], 
+    [ITequipment].[model] AS [model], 
+    [ITequipment].[startuse] AS [startuse], 
+    [ITequipment].[repair] AS [repair], 
+    [ITequipment].[price] AS [price]
+    FROM [dbo].[ITequipment] AS [ITequipment]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

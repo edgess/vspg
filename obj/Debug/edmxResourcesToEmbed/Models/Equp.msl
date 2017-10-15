@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="shgloldEntities">
+    <EntitySetMapping Name="ITequipment">
+      <EntityTypeMapping TypeName="Models.ITequipment">
+        <MappingFragment StoreEntitySet="ITequipment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="equip_no" ColumnName="equip_no" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="dept_1" ColumnName="dept_1" />
+          <ScalarProperty Name="dept_2" ColumnName="dept_2" />
+          <ScalarProperty Name="dept_3" ColumnName="dept_3" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="vedio" ColumnName="vedio" />
+          <ScalarProperty Name="cpu" ColumnName="cpu" />
+          <ScalarProperty Name="memory" ColumnName="memory" />
+          <ScalarProperty Name="hd" ColumnName="hd" />
+          <ScalarProperty Name="ip_new" ColumnName="ip_new" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="sn" ColumnName="sn" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="belong" ColumnName="belong" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="locate" ColumnName="locate" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="startuse" ColumnName="startuse" />
+          <ScalarProperty Name="repair" ColumnName="repair" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
